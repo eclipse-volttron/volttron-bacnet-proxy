@@ -1,4 +1,4 @@
-name: ci
+name: continuous-integration
 
 on:
   push:
@@ -54,18 +54,13 @@ jobs:
       run: poetry install -vv
 
     - name: Check if the documentation builds correctly
-      run: poetry run duty check-docs
+      run: poetry run make linkcheck -C docs
 
-    - name: Check the code quality
-      run: poetry run duty check-code-quality
+    - name: Check all external links for integrity in documentation
+      run: poetry run make linkcheck -C docs
 
-    - name: Check if the code is correctly typed
-      run: poetry run duty check-types
-
-    - name: Check for vulnerabilities in dependencies
-      run: |
-        pip install safety
-        poetry run duty check-dependencies
+    - name: Run pre-commit hooks
+      run: poetry run pre-commit run --all-files
 
   tests:
 
@@ -98,4 +93,4 @@ jobs:
       run: poetry install -vv || { rm -rf .poetry_cache/virtualenvs/*; poetry install -vv; }
 
     - name: Run the test suite
-      run: poetry run duty test
+      run: poetry run pytest --cov=src tests/

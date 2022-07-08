@@ -1,5 +1,5 @@
 Welcome to volttron-bacnet-proxy's documentation!
-===================================
+=================================================
 
 **volttron-bacnet-proxy** is ...
 

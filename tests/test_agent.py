@@ -1,7 +1,6 @@
-"""Tests for the `cli` module."""
-
-import pytest
+"""Unit tests"""
 
 
-def test_agent():
-    assert True
+def test_agent(bacnet_proxy):
+    assert bacnet_proxy is not None
+    assert bacnet_proxy.bacnet_application is not None
