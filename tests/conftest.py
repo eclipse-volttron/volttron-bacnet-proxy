@@ -6,7 +6,7 @@ import socket
 
 from pathlib import Path
 
-from volttron_bacnet_proxy.agent import bacnet_proxy_agent
+from volttron_bacnet_proxy.agent import initialize_agent
 
 TESTS_DIR = Path(__file__).parent
 TMP_DIR = TESTS_DIR / "tmp"
@@ -30,6 +30,6 @@ def bacnet_proxy():
     with open(config_path, 'w') as fp:
         json.dump(config_json, fp)
 
-    yield bacnet_proxy_agent(config_path)
+    yield initialize_agent(config_path)
 
     Path(config_path).unlink(missing_ok=True)
