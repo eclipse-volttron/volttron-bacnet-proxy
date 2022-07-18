@@ -1,16 +1,8 @@
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
-git-changelog = ">=0.5.0"
-httpx = ">=0.16.1"
-jinja2-cli = ">=0.7.0"
-toml = ">=0.10.2"
-
 [tool.poetry]
 name = "volttron-bacnet-proxy"
 version = "0.1.0"
 description = "BACnet Proxy is an agent that supports communication and management of BACnet devices."
-authors = ["Mark Bonicillo <mark.bonicillo@pnnl.gov>"]
+authors = ["Mark Bonicillo <volttron@pnnl.gov>"]
 license = "Apache License 2.0"
 readme = "README.md"
 repository = "https://github.com/VOLTTRON/volttron-bacnet-proxy"
@@ -18,25 +10,26 @@ homepage = "https://github.com/VOLTTRON/volttron-bacnet-proxy"
 keywords = ["volttron", "agent"]
 packages = [ { include = "volttron_bacnet_proxy", from = "src" } ]
 classifiers = [
-    "Framework :: VOLTTRON",
-    "Framework :: VOLTTRON :: Agent",
-    "Framework :: VOLTTRON :: 0.1.0"
+    "Programming Language :: Python :: 3 :: Only",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Other Audience",
+    "License :: OSI Approved :: Apache Software License"
 ]
 
 [tool.poetry.dependencies]
 python = ">=3.8,<4.0"
-bacpypes = "0.16.7"
 volttron = "^10.0.1-alpha.13"
+bacpypes = "0.16.7"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 pytest = "^6.2.5"
 pytest-cov = "^3.0.0"
 mock = "^4.0.3"
 pre-commit = "^2.17.0"
 yapf = "^0.32.0"
 toml = "^0.10.2"
-isort = "^5.10.1"
-safety = "^1.10.3"
 mypy = "^0.942"
 coverage = "^6.3.2"
 Sphinx = "^4.5.0"
@@ -58,3 +51,9 @@ ignore_patterns = [
     "dist/**",
     "docs/**"
 ]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+

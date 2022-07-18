@@ -428,7 +428,7 @@ class BACnetApplication(BIPSimpleApplication, RecurringTask):
 write_debug_str = "Writing: {target} {type} {instance} {property} (Priority: {priority}, Index: {index}): {value}"
 
 
-def bacnet_proxy_agent(config_path, **kwargs):
+def initialize_agent(config_path, **kwargs):
     config = load_config(config_path)
     device_address = config["device_address"]
     max_apdu_len = config.get("max_apdu_length", 1024)
@@ -920,7 +920,7 @@ def main():
     :return:
     """
     try:
-        vip_main(bacnet_proxy_agent, identity="platform.bacnet_proxy", version=__version__)
+        vip_main(initialize_agent, identity="platform.bacnet_proxy", version=__version__)
     except Exception as e:
         _log.exception('unhandled exception')
 
