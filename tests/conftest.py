@@ -1,10 +1,10 @@
 """Tests suite for `volttron_bacnet_proxy`."""
 
-import pytest
 import json
 import socket
-
 from pathlib import Path
+
+import pytest
 
 from volttron_bacnet_proxy.agent import initialize_agent
 

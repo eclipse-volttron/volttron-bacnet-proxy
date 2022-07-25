@@ -70,17 +70,31 @@ from bacpypes.task import RecurringTask
 # Tweeks to BACpypes to make it play nice with Gevent.
 bacpypes.core.enable_sleeping()
 
-from bacpypes.apdu import (AbortPDU, ConfirmedCOVNotificationRequest, ConfirmedRequestSequence,
-                           Error, IAmRequest, PropertyReference, ReadAccessSpecification,
-                           ReadPropertyACK, ReadPropertyMultipleACK, ReadPropertyMultipleRequest,
-                           ReadPropertyRequest, RejectPDU, SimpleAckPDU, SubscribeCOVRequest,
-                           WhoIsRequest, WritePropertyRequest, encode_max_apdu_length_accepted)
+from bacpypes.apdu import (
+    AbortPDU,
+    ConfirmedCOVNotificationRequest,
+    ConfirmedRequestSequence,
+    Error,
+    IAmRequest,
+    PropertyReference,
+    ReadAccessSpecification,
+    ReadPropertyACK,
+    ReadPropertyMultipleACK,
+    ReadPropertyMultipleRequest,
+    ReadPropertyRequest,
+    RejectPDU,
+    SimpleAckPDU,
+    SubscribeCOVRequest,
+    WhoIsRequest,
+    WritePropertyRequest,
+    encode_max_apdu_length_accepted,
+)
 from bacpypes.app import BIPSimpleApplication
 from bacpypes.basetypes import ServicesSupported
 from bacpypes.constructeddata import Any, Array, Choice
 from bacpypes.object import get_datatype
 from bacpypes.pdu import Address, GlobalBroadcast
-from bacpypes.primitivedata import (Atomic, Enumerated, Integer, Null, Real, Unsigned)
+from bacpypes.primitivedata import Atomic, Enumerated, Integer, Null, Real, Unsigned
 from bacpypes.service.device import LocalDeviceObject
 from bacpypes.task import TaskManager
 from gevent.event import AsyncResult

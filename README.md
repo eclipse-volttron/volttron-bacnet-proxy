@@ -1,6 +1,6 @@
 # volttron-bacnet-proxy
 
-[![ci](https://github.com/VOLTTRON/volttron-bacnet-proxy/workflows/ci/badge.svg)](https://github.com/VOLTTRON/volttron-bacnet-proxy/actions?query=workflow%3Aci)
+![Passing?](https://github.com/VOLTTRON/volttron-bacnet-proxy/actions/workflows/run_tests.yml/badge.svg)
 [![documentation](https://img.shields.io/badge/docs-mkdocs%20material-blue.svg?style=flat)](https://VOLTTRON.github.io/volttron-bacnet-proxy/)
 [![pypi version](https://img.shields.io/pypi/v/volttron-bacnet-proxy.svg)](https://pypi.org/project/volttron-bacnet-proxy/)
 
