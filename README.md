@@ -1,6 +1,6 @@
 # BACnet Proxy Agent
 
-![Passing?](https://github.com/eclipse-volttron/volttron-bacnet-proxy/actions/workflows/run_tests.yml/badge.svg)
+![Passing?](https://github.com/eclipse-volttron/volttron-bacnet-proxy/actions/workflows/run-tests.yml/badge.svg)
 [![pypi version](https://img.shields.io/pypi/v/volttron-bacnet-proxy.svg)](https://pypi.org/project/volttron-bacnet-proxy/)
 
 BACnet Proxy is an agent that supports communication and management of BACnet devices.
