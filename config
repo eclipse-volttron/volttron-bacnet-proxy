@@ -1,5 +1,5 @@
 {
-    "device_address": "10.0.2.15",
+    "device_address": "172.20.236.12",
     "max_apdu_length": 1024,
     "object_id": 599,
     "object_name": "Volttron BACnet driver",
