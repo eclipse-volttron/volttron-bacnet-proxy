@@ -1,6 +1,6 @@
 # BACnet Proxy Agent
 
-![Passing?](https://github.com/eclipse-volttron/volttron-bacnet-proxy/actions/workflows/run-tests.yml/badge.svg)
+[![Passing?](https://github.com/eclipse-volttron/volttron-bacnet-proxy/actions/workflows/run-tests.yml/badge.svg)](https://github.com/eclipse-volttron/volttron-bacnet-proxy/actions/workflows/run-tests.yml)
 [![pypi version](https://img.shields.io/pypi/v/volttron-bacnet-proxy.svg)](https://pypi.org/project/volttron-bacnet-proxy/)
 
 BACnet Proxy is an agent that supports communication and management of BACnet devices.
@@ -43,19 +43,19 @@ python -m venv env
 source env/bin/activate
 ```
 
-Installing volttron-platform-driver requires a running volttron instance.
+Installing volttron-platform-driver requires a running volttron instance. Install volttron and start an instance in the background and save log output to a file named 'volttron.log'
 
 ```shell
 pip install volttron
-
-# Start platform with output going to volttron.log
 volttron -vv -l volttron.log &
 ```
 
 Install and start the BACnet proxy agent.
 
 ```shell
-vctl install volttron-bacnet-proxy --agent-config <path to bacnet proxy config file> --start
+vctl install volttron-bacnet-proxy --agent-config <path to bacnet proxy config file> \
+--vip-identity platform.bacnet_proxy \
+--start
 ```
 
 View the status of the installed agent
