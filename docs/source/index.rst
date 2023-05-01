@@ -10,30 +10,11 @@ Introduction
 Communication with BACnet device on a network happens via a single virtual BACnet device.  In VOLTTRON driver framework,
 we use a separate agent specifically for communicating with BACnet devices and managing the virtual BACnet device.
 
-Requirements
-------------
-The BACnet Proxy agent requires the BACPypes package. This package can be installed in an activated environment with:
-
-.. code-block:: bash
-
-    pip install bacpypes
-
-Alternatively, running :ref:`bootstrap.py <Platform-Installation>` with the `--drivers` option will install all
-requirements for drivers included in the repository including BACnet.
-
-.. code-block:: bash
-
-    python3 bootstrap.py --drivers
-
-.. warning::
-
-    Current versions of VOLTTRON support **only** BACPypes version 0.16.7
-
 
 Configuration
 -------------
 
-The agent configuration sets up the virtual BACnet device.
+The agent configuration sets up the virtual BACnet device:
 
 .. code-block:: json
 
@@ -53,8 +34,8 @@ BACnet device settings
 -  **device_address** - Address bound to the network port over which BACnet communication will happen on the computer
    running VOLTTRON.  This is **NOT** the address of any target device.  See
    :ref:`BACnet Router Addressing <BACnet-Router-Addressing>`.
--  **object_id** - ID of the Device object of the virtual BACnet device.  Defaults to 599. Only needs to be changed if
-   there is a conflicting BACnet device ID on your network.
+-  **object_id** - ID of the Device object of the virtual BACnet device. (Defaults to 599) This should only need
+   to be changed if there is a conflicting BACnet device ID on your network.
 
 These settings determine the capabilities of the virtual BACnet device.  BACnet communication happens at the lowest
 common denominator between two devices.  For instance, if the BACnet proxy supports segmentation and the target device
@@ -183,8 +164,6 @@ BACnet Change of Value Services
 
 |BACnet Change of Value Communications|
 
-Change of Value Services added in version 0.5 of the BACnet Proxy and version 3.2 of the Platform Driver.
-
 There are a variety of scenarios in which a user may desire data from some BACnet device point values to be published
 independently of the regular scrape interval.  Bacpypes provides a "ChangeOfValueServices" (hereby referred to as 'COV')
 module, which enables a device to push updates to the platform.
@@ -204,3 +183,9 @@ based on the driver's configured publish topics.
 https://bacpypes.readthedocs.io/en/latest/modules/service/cov.html
 
 .. |BACnet Change of Value Communications| image:: files/bacnet_cov.png
+
+
+.. toctree::
+   :hidden:
+
+   BACnet Router Addressing <bacnet-router-addressing>

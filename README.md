@@ -8,47 +8,21 @@ BACnet Proxy is an agent that supports communication and management of BACnet de
 Communication with a BACnet device on a network happens via a single virtual BACnet device. In the VOLTTRON driver framework,
 we use a separate agent specifically for communicating with BACnet devices and managing the virtual BACnet device.
 
-# Prerequisites
+# Requires
 
-* Python >=3.8
+* python >= 3.10
+* volttron >= 10.0
+* bacpypes == 0.16.7
 
-## Python
-
-<details>
-<summary>To install Python 3.8, we recommend using <a href="https://github.com/pyenv/pyenv"><code>pyenv</code></a>.</summary>
-
-```bash
-# install pyenv
-git clone https://github.com/pyenv/pyenv ~/.pyenv
-
-# setup pyenv (you should also put these three lines in .bashrc or similar)
-export PATH="${HOME}/.pyenv/bin:${PATH}"
-export PYENV_ROOT="${HOME}/.pyenv"
-eval "$(pyenv init -)"
-
-# install Python 3.8
-pyenv install 3.8.10
-
-# make it available globally
-pyenv global system 3.8.10
-```
-</details>
+# Documentation
+More detailed documentation can be found on [ReadTheDocs](https://volttron.readthedocs.io/en/modular/). The RST source
+of the documentation for this component is located in the "docs" directory of this repository.
 
 # Installation
 
-Create and activate a virtual environment.
-
-```shell
-python -m venv env
-source env/bin/activate
-```
-
-Installing volttron-platform-driver requires a running volttron instance. Install volttron and start an instance in the background and save log output to a file named 'volttron.log'
-
-```shell
-pip install volttron
-volttron -vv -l volttron.log &
-```
+Before installing the VOLTTRON Modbus driver, VOLTTRON should be installed and running.
+Its virtual environment should be active. Information on how to install
+of the VOLTTRON platform can be found [here](https://github.com/eclipse-volttron/volttron-core).
 
 Install and start the BACnet proxy agent.
 
