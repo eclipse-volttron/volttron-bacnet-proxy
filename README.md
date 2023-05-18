@@ -1,5 +1,7 @@
 # BACnet Proxy Agent
 
+![Python 3.10](https://img.shields.io/badge/python-3.10-blue.svg)
+![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)
 [![Passing?](https://github.com/eclipse-volttron/volttron-bacnet-proxy/actions/workflows/run-tests.yml/badge.svg)](https://github.com/eclipse-volttron/volttron-bacnet-proxy/actions/workflows/run-tests.yml)
 [![pypi version](https://img.shields.io/pypi/v/volttron-bacnet-proxy.svg)](https://pypi.org/project/volttron-bacnet-proxy/)
 
