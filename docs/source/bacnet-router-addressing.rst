@@ -23,8 +23,7 @@ this address:
 
 ``<network>`` must be number from **0 to 65534** and ``<address>`` must be a number from **0 to 255**.
 
-This type of address can be used anywhere an address is required in configuration of the :ref:`Volttron BACnet driver
-<BACnet-Driver>`.
+This type of address can be used anywhere an address is required in configuration of the :ref:`Volttron BACnet driver <BACnet-Driver>`.
 
 Caveats
 -------
